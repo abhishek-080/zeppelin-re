@@ -7,7 +7,6 @@ import { useEffect } from "react";
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-
   const links = [
     {
       id: 1,
@@ -29,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div name="Home">
-      <nav className="   bg-black fixed top-0 w-full z-40 h-[85px]">
+      <nav className=" bg-black fixed top-0 w-full z-40 h-[85px]">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between py-5 ">
           <div className="w-full relative flex justify-between lg:w-auto lg:justify-start">
             <a className="text-3xl tracking-wide  inline-block ml-9  py-2  uppercase text-white cursor-pointer font-metal">
@@ -55,13 +54,11 @@ const Navbar = () => {
                   key={id}
                   className="nav-item pointer pr-2 md:mt-[-40px] lg:mt-[10px]"
                 >
-                  <a className="px-3 py-2 flex items-center text-base uppercase cursor-pointer text-white hover:opacity-60 ">
-                    <span className="ml-2 ">
-                      <Link to={link} smooth duration={500}>
-                        {link}
-                      </Link>
-                    </span>
-                  </a>
+                  <Link to={link} smooth duration={500}>
+                    <a className="px-3 py-2 flex items-center text-base uppercase cursor-pointer text-white hover:opacity-60 ">
+                      <span className="ml-2 ">{link}</span>
+                    </a>
+                  </Link>
                 </li>
               ))}
             </ul>
